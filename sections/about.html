@@ -1,0 +1,130 @@
+<section class="about" id="about">
+    <div class="container">
+        <div class="about-card">
+            <div class="about-grid">
+                <div class="about-content">
+                    <h2 class="about-title">About Us</h2>
+                    <p>At Fathom & Co., we believe that every business deserves to operate at its full potential. Our mission is to help companies navigate the waters of automation, making complex processes simple and efficient.</p>
+                    
+                    <p>With years of experience in process automation, we've helped businesses across various industries reduce manual work, minimize errors, and focus on what truly matters - growing their business and serving their customers.</p>
+
+                    <p>Pictured: We individually won awards at a conference ranging from "Best in Show" to "Best Customer Service."</p>
+                </div>
+            </div>
+            <div class="about-image-container">
+                <div class="about-image">
+                    <img src="assets/fathom-team.jpg" alt="Fathom & Co. Team">
+                </div>
+                <div class="about-image-caption">
+                    <h3>Fathom & Co.</h3>
+                    <span>Elliott, Dominic, Peter</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.about {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--background);
+}
+
+.about-title {
+    text-align: left;
+    margin-bottom: var(--spacing-md);
+}
+
+.about-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-grid {
+    margin-bottom: var(--spacing-lg);
+}
+
+.about-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+    max-width: 800px;
+}
+
+.about-content p:last-child {
+    margin-bottom: 0;
+}
+
+.about-image-container {
+    margin-top: var(--spacing-lg);
+}
+
+.about-image {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    margin-bottom: var(--spacing-md);
+    width: 100%;
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-image-caption {
+    padding: var(--spacing-sm) 0;
+    text-align: center;
+}
+
+.about-image-caption h3 {
+    color: var(--primary);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+}
+
+.about-image-caption span {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+@media (max-width: 992px) {
+    .about-title {
+        text-align: center;
+    }
+
+    .about-content p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-card {
+        padding: var(--spacing-lg);
+    }
+
+    .about-image-caption h3 {
+        font-size: 1.25rem;
+    }
+
+    .about-image-caption span {
+        font-size: 1rem;
+    }
+}
+</style> 

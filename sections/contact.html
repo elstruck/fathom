@@ -1,0 +1,84 @@
+<section class="contact" id="contact">
+    <div class="container">                  
+            <div class="contact-content">
+                <div class="grid grid-2 grid-md-1 gap-lg">
+                    <div class="contact-first">
+                        <h2>Why Clients Choose Us</h2>
+                        <ul class="benefits-list">
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <p>Automations built specifically for your processes, creating efficiencies for you to focus on what you do best.</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <p>One-time or recurring pricing models to suit your needs.</p>
+                            </li>
+                            <li>
+                                <i class="fas fa-check"></i>
+                                <p>Ongoing support and updates to ensure your automations continue to work seamlessly.</p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Ready to Build?<br>Let's Talk.</h2>
+                        
+                        <div class="contact-form-container">
+                            
+                            <form class="contact-form" id="contactForm" method="POST" action="/send-email" enctype="multipart/form-data">
+                                <p class="section-subtitle">Tell us about your needs and we'll schedule a free consultation to see if we're a good fit.</p>
+                                <div class="form-group">
+                                    <label for="name"><i class="fas fa-user"></i> Full Name</label>
+                                    <input type="text" id="name" name="name" placeholder="William Smith" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email"><i class="fas fa-envelope"></i> Email Address</label>
+                                    <input type="email" id="email" name="email" placeholder="wsmith@smith&co.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="message"><i class="fas fa-message"></i> How can we help?</label>
+                                    <textarea id="message" name="message" rows="4" placeholder="I'd like to discuss..." required></textarea>
+                                </div>
+                                <button type="submit" class="btn-primary">
+                                    <i class="fas fa-paper-plane"></i> Send Message
+                                </button>
+                                <p>Or</p>
+                                <div class="text-center">
+                                <a href="https://calendly.com/bwl-elliott/fathom-co-consult" target="_blank" class="primary">
+                                    <i class="fas fa-calendar-alt"></i> Schedule Directly through Calendly
+                                </a>
+                                </div>
+                            </form>
+                        </div>    
+                    </div>            
+            </div>            
+        </div>
+    </div>
+</section>
+
+<link rel="stylesheet" href="/styles/sections/contact.css">
+<script>
+document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    const formData = new FormData(e.target);
+    
+    try {
+        const response = await fetch('/send-email', {
+            method: 'POST',
+            body: formData
+        });
+        
+        const data = await response.json();
+        
+        if (data.status === 'success') {
+            alert('Message sent successfully! We\'ll get back to you soon.');
+            e.target.reset();
+        } else {
+            alert('There was an error sending your message. Please try again later.');
+        }
+    } catch (error) {
+        alert('There was an error sending your message. Please try again later.');
+        console.error('Error:', error);
+    }
+});
+</script> 

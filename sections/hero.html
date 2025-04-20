@@ -1,0 +1,150 @@
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Automation solutions for <br> <i><u>everyone.</u></i></h1>
+            
+            <a href="#process-section" class="btn-primary">Learn More</a>
+        </div>
+        <div class="hero-image">
+            <div class="image-card">
+                <img src="assets/hero-image-2.png" alt="Custom Dashboard">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.hero {
+    padding-top: calc(var(--spacing-xl) + 80px);
+    background-color: var(--background);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background-color: var(--secondary);
+    opacity: 0.2;
+    border-radius: 0 0 0 100%;
+}
+
+.hero .container {
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+    max-width: 1400px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: var(--font-size-h1);
+    line-height: 1.1;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-lg);
+    max-width: 500px;
+}
+
+.hero-image {
+    position: relative;
+    perspective: 1000px;
+    padding: var(--spacing-lg);
+    width: 100%;
+}
+
+.image-card {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+    width: 125%;
+}
+
+.image-card::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius-lg);
+    transform: translateZ(-10px) rotate(-4deg);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.image-card img {
+    position: relative;
+    width: 100%;
+    height: auto;
+    max-width: none;
+    border: 3px solid #a7997e;
+    border-radius: var(--radius-lg);
+    transform: translateZ(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+@media (max-width: 1200px) {
+    .hero .container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .image-card {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding-top: calc(var(--spacing-lg) + 60px);
+    }
+
+    .hero .container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    .hero-image {
+        padding: var(--spacing-sm);
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .image-card {
+        width: 100%;
+    }
+
+    .image-card img {
+        border-width: 2px;
+    }
+
+    .hero-subtitle {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image-card::before {
+        top: -8px;
+        left: -8px;
+        right: -8px;
+        bottom: -8px;
+        transform: translateZ(-5px) rotate(0deg);
+    }
+}
+</style> 

@@ -1,0 +1,133 @@
+<section class="services">
+    <div class="container">
+        <h2 class="text-center">Simple Pricing</h2>
+        
+        <div class="grid grid-2 grid-md-1 gap-lg">
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-file-invoice-dollar"></i>
+                </div>
+                <h3>Per Project</h3>
+                <p>Perfect for businesses that need specific automations built. Pay only for what you need, when you need it.</p>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> Starting at $500 per automation</li>
+                    <li><i class="fas fa-check"></i> One-time payment</li>
+                    <li><i class="fas fa-check"></i> Full ownership of automation</li>
+                    <li><i class="fas fa-check"></i> Includes testing and documentation</li>
+                </ul>
+                <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+            </div>
+            
+            <div class="service-card">
+                <div class="service-icon">
+                    <i class="fas fa-infinity"></i>
+                </div>
+                <h3>Monthly Subscription</h3>
+                <p>We are your <u>fractional CTO</u> (chief technology officer). Ideal for businesses that need ongoing automation development and tech support.</p>
+                <ul class="pricing-features">
+                    <li><i class="fas fa-check"></i> $3,000 per month</li>
+                    <li><i class="fas fa-check"></i> Unlimited automations</li>
+                    <li><i class="fas fa-check"></i> Priority support</li>
+                    <li><i class="fas fa-check"></i> Monthly consultation included</li>
+                </ul>
+                <a href="#contact" class="service-link">Subscribe Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.services {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--white);
+}
+
+.services h2 {
+    margin-bottom: var(--spacing-xl);
+}
+
+.service-card {
+    background-color: var(--background);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+    color: var(--primary);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    border-radius: var(--radius-md);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.service-card h3 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+    font-size: 1.5rem;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-md);
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 var(--spacing-md) 0;
+}
+
+.pricing-features li {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xs);
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.pricing-features li i {
+    color: var(--primary);
+    font-size: 0.875em;
+}
+
+.service-link {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    transition: all 0.3s ease;
+    margin-top: auto;
+}
+
+.service-link:hover {
+    transform: translateX(5px);
+}
+
+.service-link i {
+    font-size: 0.875em;
+    transition: transform 0.3s ease;
+}
+
+.service-link:hover i {
+    transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+    .services h2 {
+        text-align: center;
+    }
+}
+</style> 

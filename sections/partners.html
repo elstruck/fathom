@@ -1,0 +1,64 @@
+<section class="partners">
+    <div class="container">
+        <h3 class="text-center">Trusted by</h3>
+        <div class="partners-grid">
+            <img src="assets/bwl-logo.png" alt="Built with Love" class="partner-logo">
+            <img src="assets/datax-logo.png" alt="DataX" class="partner-logo">
+            <img src="assets/eidson-logo.webp" alt="Eidson Builders" class="partner-logo">
+            <img src="assets/rbw-logo.webp" alt="RBW" class="partner-logo">            
+        </div>
+    </div>
+</section>
+
+<style>
+.partners {
+    padding: var(--spacing-lg) 0;
+    background-color: var(--white);
+}
+
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--spacing-lg);
+    align-items: center;
+    justify-items: center;
+}
+
+.partner-logo {
+    max-width: 120px;
+    width: 100%;
+    height: auto;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.partner-logo:hover {
+    opacity: 1;
+}
+
+@media (max-width: 992px) {
+    .partners-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .partner-logo {
+        max-width: 100px;
+    }
+}
+
+@media (max-width: 576px) {
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-sm);
+    }
+
+    .partner-logo {
+        max-width: 80px;
+    }
+
+    .partners {
+        padding: var(--spacing-md) 0;
+    }
+}
+</style> 
