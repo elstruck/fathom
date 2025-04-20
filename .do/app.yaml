@@ -1,0 +1,13 @@
+name: fathom-website
+services:
+  - name: web
+    git:
+      branch: main
+      repo_clone_url: ${GITHUB_REPO_URL}
+    build_command: npm install
+    run_command: npm start
+    envs:
+      - key: NODE_ENV
+        value: production
+    instance_count: 1
+    instance_size_slug: basic-xxs 
